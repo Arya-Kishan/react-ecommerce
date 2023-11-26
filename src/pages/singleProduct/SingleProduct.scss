@@ -1,0 +1,25 @@
+.single {
+    border: 2px solid red;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+
+    .product {
+        border: 2px solid green;
+        width: fit-content;
+    }
+
+    .handle {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        align-items: center;
+
+        .addQuantity {
+            display: flex;
+            flex-direction: row;
+            gap: 5px;
+            align-items: center;
+        }
+    }
+}

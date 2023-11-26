@@ -1,0 +1,26 @@
+h1{
+    text-align: center;
+}
+.product{
+    width: 100vw;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 30px;
+    align-items: center;
+    justify-content: center;
+}
+.product > div{
+    width: 200px;
+    overflow: hidden;
+
+}
+.card{
+    border: 2px solid black;
+    border-radius: 10px;
+}
+.card img{
+    width: 200px;
+    height: 120px;
+
+}
