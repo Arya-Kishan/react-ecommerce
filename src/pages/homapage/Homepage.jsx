@@ -50,7 +50,7 @@ export default function Homepage() {
             <section><Product /></section>
 
             <Drawer
-                anchor={'bottom'}
+                anchor={'top'}
                 open={open}
                 onClose={() => { setOpen(false) }}
             >

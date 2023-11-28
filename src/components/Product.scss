@@ -8,6 +8,7 @@ h1 {
 .productHeading {
     @include flex(row, space-between, center, 0, nowrap);
     padding: 0 10px;
+    margin: 10px 0;
 }
 
 .product {

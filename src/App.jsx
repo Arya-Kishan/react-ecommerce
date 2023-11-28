@@ -8,7 +8,7 @@ import { BrowserRouter, Routes, Route } from 'react-router-dom'
 // const Details = lazy(() => (import('./pages/Details/Details')))
 const Homepage = lazy(() => (import('./pages/homapage/Homepage')))
 const Categories = lazy(() => (import('./pages/categories/Categories')))
-const SingleProduct = lazy(() => (import('./pages/singleProduct/singleProduct')))
+const SingleProduct = lazy(() => (import('./pages/singleProduct/SingleProduct')))
 const Cart = lazy(() => (import('./pages/cart/Cart')))
 const Navbar = lazy(() => (import('./pages/Navbar/Navbar')))
 const Search = lazy(() => (import('./pages/search/Search')))

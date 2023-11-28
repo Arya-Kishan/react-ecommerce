@@ -24,7 +24,7 @@ export default function Navbar() {
 
   return (
     <div className='navbar'>
-      <h2>SHOP</h2>
+      <h2 onClick={()=>navigate("/")}>SHOP</h2>
 
       <div className='cartbtn'>
         <IconButton onClick={() => { navigate("/cart") }}><ShoppingCartOutlinedIcon style={{ color: "white" }} />{cart.length > 0 ? <span id='quantity'>{cart.length}</span> : ""}</IconButton>

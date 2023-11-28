@@ -16,7 +16,7 @@ export default function SingleProduct() {
     const dispatch = useDispatch()
 
     const items = useSelector(state => state.categoryitems.singleitem)
-    console.log(items);
+
     const handleAddToCart = (items) => {
         dispatch(addToCart({ ...items, quantity: quantity }))
         setSnack(true)

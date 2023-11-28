@@ -102,7 +102,6 @@
 
 .searchDrawer {
     height: 20vh;
-    border: 3px solid gold;
     @include flex(row, center, center, 10px, nowrap);
     background: linear-gradient(blue, gold);
 
