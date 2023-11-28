@@ -1,0 +1,31 @@
+@mixin flex($dir, $jC, $aI, $gap, $w) {
+    display: flex;
+    flex-direction: $dir;
+    justify-content: $jC;
+    align-items: $aI;
+    gap: $gap;
+    flex-wrap: $w;
+}
+
+@mixin pos() {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+@mixin dimension($h, $w, $tm, $rm, $tp, $rp) {
+    height: $h;
+    width: $w;
+    margin: $tm, $rm;
+    padding: $tp, $rp;
+}
+
+@mixin button{
+    color: white;
+    border: transparent;
+    border-radius: 8px;
+    background-color: blue;
+    padding: 6px;
+    font-size: 15px;
+}

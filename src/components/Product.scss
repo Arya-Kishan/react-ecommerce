@@ -1,26 +1,20 @@
-h1{
+@import '../partial';
+
+h1 {
     text-align: center;
+    padding: 10px 0;
 }
-.product{
-    width: 100vw;
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    gap: 30px;
-    align-items: center;
-    justify-content: center;
-}
-.product > div{
-    width: 200px;
-    overflow: hidden;
 
+.productHeading {
+    @include flex(row, space-between, center, 0, nowrap);
+    padding: 0 10px;
 }
-.card{
-    border: 2px solid black;
-    border-radius: 10px;
-}
-.card img{
-    width: 200px;
-    height: 120px;
 
+.product {
+    @include flex(row, center, center, 30px, wrap);
+    width: 100%;
+
+    @media screen and (max-width : '456px') {
+        @include flex(row, center, center, 10px, wrap);
+    }
 }

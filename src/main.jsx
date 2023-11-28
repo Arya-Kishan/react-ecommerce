@@ -8,14 +8,16 @@ import { Provider } from 'react-redux'
 import productSlice from './redux/productSlice.jsx'
 import categorySlice from './redux/categorySlice.jsx'
 import cartSlice from './redux/cartSlice.jsx'
+import searchSlice from './redux/searchSlice.jsx'
 
 const queryClient = new QueryClient()
 
 const store = configureStore({
   reducer: {
-    product:productSlice,
-    categoryitems : categorySlice,
-    cart : cartSlice
+    product: productSlice,
+    categoryitems: categorySlice,
+    cart: cartSlice,
+    search: searchSlice
   },
 })
 

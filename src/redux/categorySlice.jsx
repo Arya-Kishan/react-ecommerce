@@ -5,7 +5,6 @@ import axios from 'axios'
 export const getCategoryItems = createAsyncThunk(
     'item/categoryitems',
     async (item, thunkAPI) => {
-        console.log(item);
         const { data } = await axios.get(`https://dummyjson.com/products/category/${item}`)
         return data.products
     }

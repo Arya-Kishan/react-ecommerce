@@ -1,0 +1,61 @@
+@import '../../partial';
+
+.card {
+    cursor: pointer;
+    border: 2px solid white;
+    border-radius: 10px;
+    @include flex(column, normal, normal, 5px, nowrap);
+    font-size: 20px;
+    width: 300px;
+    overflow: hidden;
+
+    & img {
+        border-radius: 10px 10px 0 0;
+        width: 300px;
+        height: 260px;
+    }
+
+    @media screen and (max-width : '999px') {
+        width: 200px;
+        overflow: hidden;
+
+        & img {
+            border-radius: 10px 10px 0 0;
+            width: 199px;
+            height: 130px;
+        }
+    }
+
+    @media screen and (max-width : '456px') {
+        width: 42vw;
+        overflow: hidden;
+
+        & img {
+            border-radius: 10px 10px 0 0;
+            width: 41vw;
+            height: 130px;
+        }
+    }
+
+
+}
+
+.price {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 2px 5px;
+}
+
+.price>div {
+    display: flex;
+    align-items: center;
+}
+
+#title {
+    padding: 0 5px;
+    text-transform: capitalize;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}

@@ -1,0 +1,117 @@
+@import '../../partial';
+
+.banner {
+    @include flex(column, center, center, 30px, nowrap);
+}
+
+.home {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    background-color: blue;
+    color: white;
+    width: 100%;
+    padding: 20px 0;
+    border-bottom: 1px solid white;
+
+    &>div:nth-child(1) {
+        @include flex(column, center, center, 0, nowrap);
+
+        p {
+            width: 368px;
+            text-align: center;
+        }
+    }
+
+    & img {
+        width: 400px;
+    }
+
+    & button {
+        border-radius: 8px;
+        padding: 5px;
+        background-color: gold;
+        border: 2px solid gold;
+        box-shadow: 0 0 6px 2px gold;
+    }
+
+    @media screen and (max-width : '770px') {
+        & {
+            grid-template-columns: 1fr;
+            grid-template-rows: 1fr 1fr;
+            height: 89.5vh;
+            gap: 50px;
+
+        }
+
+        &>div:nth-child(2) {
+            @include flex(column, flex-start, center, 0, nowrap);
+        }
+
+        & img {
+            width: 33vh;
+        }
+
+        &>div:nth-child(1) {
+            & h1 {
+                font-size: 50px;
+            }
+
+            & p {
+                font-size: 20px;
+                font-family: 'Times New Roman', Times, serif
+            }
+
+            @include flex(column, center, center, 0, nowrap);
+
+            p {
+                width: 280px;
+            }
+        }
+    }
+
+    @media screen and (min-width : '1100px') {
+        & {
+            height: 93.5vh;
+            padding: 0;
+
+        }
+
+        &>div:nth-child(1) {
+            @include flex(column, center, center, 0, nowrap);
+
+            h1{
+                font-size: 60px;
+            }
+
+            p {
+                width: 368px;
+                text-align: center;
+                font-size: 20px;
+            }
+        }
+        &>div:nth-child(2) {
+            @include flex(column, center, center, 0, nowrap);
+        }
+
+        & img {
+            width: 550px;
+        }
+    }
+
+}
+
+.searchDrawer {
+    height: 20vh;
+    border: 3px solid gold;
+    @include flex(row, center, center, 10px, nowrap);
+    background: linear-gradient(blue, gold);
+
+    & button {
+        border-radius: 8px;
+        padding: 5px;
+        background-color: gold;
+        border: 2px solid gold;
+        box-shadow: 0 0 6px 2px gold;
+    }
+
+}

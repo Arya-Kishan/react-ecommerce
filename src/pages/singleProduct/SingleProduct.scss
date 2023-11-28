@@ -1,19 +1,29 @@
+@import '../../partial';
+
 .single {
-    border: 2px solid red;
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
+    @include flex(row, space-around, center, 0px, nowrap);
+
 
     .product {
-        border: 2px solid green;
         width: fit-content;
+        @include flex(column, center, center, 25px, nowrap);
+
+        .productImg {
+            width: 100%;
+            box-shadow: 0 0 5px 8px white;
+        }
     }
 
     .handle {
-        display: flex;
-        flex-direction: column;
-        gap: 10px;
-        align-items: center;
+        @include flex(column, center, center, 10px, nowrap);
+        width: 100%;
+
+        & button {
+            border: 2px solid white;
+            box-shadow: 0 0 3px 1px white;
+            background-color: blue;
+            color: white;
+        }
 
         .addQuantity {
             display: flex;
@@ -21,5 +31,93 @@
             gap: 5px;
             align-items: center;
         }
+
+        .addbtn,
+        .addbtn button {
+            width: 100%;
+            padding: 6px;
+        }
+
     }
+
+    @media screen and (max-width : '1294px') {
+        & {
+            @include flex(column, space-around, center, 0px, nowrap);
+
+        }
+    }
+}
+
+.snack {
+    border: 2px solid transparent;
+    border-radius: 8px;
+    width: 160px;
+    background-color: yellow;
+    color: black;
+    @include flex(row, center, center, 15px, nowrap);
+    padding: 5px;
+
+    button {
+        padding: 5px;
+        border: 2px solid white;
+        border-radius: 8px;
+        background-color: yellow;
+        color: green;
+    }
+}
+
+.extraFeatures {
+    margin-top: 20px;
+    @include flex(column, flex-start, normal, 10px, nowrap);
+
+    & span {
+        font-weight: 900;
+        font-size: 18px;
+    }
+
+    .extraImages {
+        width: 100%;
+        height: fit-content;
+        @include flex(row, flex-start, normal, 10px, nowrap);
+        overflow: scroll;
+
+        & img {
+            cursor: pointer;
+            width: 180px;
+            height: 190px;
+            border: 2px solid white;
+        }
+    }
+
+    @media screen and (max-width : "999px") {
+        width: 100vw;
+        padding-left: 10px;
+
+        & img {
+            padding: 4px;
+            width: 99vw;
+        }
+    }
+
+}
+
+.largeImg {
+    @include pos();
+    @include flex(column, center, center, 10px, nowrap);
+    background: linear-gradient(transparent, black);
+    height: 100vh;
+    width: 100vw;
+
+    & img {
+        padding: 10px;
+        width: 70vw;
+    }
+
+    @media screen and (max-width : "999px") {
+        & img {
+            padding: 10px;
+            width: 99vw;
+        }
+    }
+
 }

@@ -1,0 +1,29 @@
+@import '../../partial';
+
+@mixin button() {
+    padding: 4px 10px;
+    background-color: blue;
+    border: 2px solid white;
+    border-radius: 6px;
+    color: white;
+    font-size: 15px;
+}
+
+.filter {
+    background: linear-gradient(blue, rgb(64, 64, 216));
+    color: white;
+
+    button {
+        @include button();
+        @include flex(row, center, center, 5px, nowrap);
+    }
+}
+
+.filter>div {
+    @include flex(row, center, center, 15px, nowrap);
+    padding: 10px;
+
+    button {
+        @include button();
+    }
+}
