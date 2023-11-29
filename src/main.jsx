@@ -9,6 +9,7 @@ import productSlice from './redux/productSlice.jsx'
 import categorySlice from './redux/categorySlice.jsx'
 import cartSlice from './redux/cartSlice.jsx'
 import searchSlice from './redux/searchSlice.jsx'
+import firebaseSlice from './redux/firebase/firebaseSlice.jsx'
 
 const queryClient = new QueryClient()
 
@@ -17,7 +18,8 @@ const store = configureStore({
     product: productSlice,
     categoryitems: categorySlice,
     cart: cartSlice,
-    search: searchSlice
+    search: searchSlice,
+    firebase: firebaseSlice,
   },
 })
 

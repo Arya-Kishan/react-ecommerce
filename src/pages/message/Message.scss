@@ -1,0 +1,85 @@
+@import '../../partial';
+
+@mixin btn() {
+    border: transparent;
+    padding: 10px;
+    background-color: rgb(42, 42, 255);
+    color: white;
+    border-radius: 10px;
+}
+
+;
+
+.reviewMain {
+    background-color: blue;
+    margin: 10px 0;
+
+    .checkBtn {
+        @include btn();
+        @include flex(row, flex-start, center, 10px, nowrap);
+    }
+}
+
+.messageMain {
+    @include flex(column, space-between, normal, 15px, nowrap);
+
+    .review {
+        display: grid;
+        grid-template-columns: .7fr .3fr;
+        grid-template-rows: 1fr 1fr;
+
+        &>div:nth-child(1) {
+            @include flex(row, flex-start, center, 5px, nowrap);
+        }
+
+        &>div:nth-child(2) {
+            padding-left: 30px;
+            text-align: end;
+            @include flex(row, flex-end, center, 5px, nowrap);
+        }
+
+        &>div:nth-child(3) {
+            padding-left: 30px;
+            text-align: left;
+        }
+
+        &>div:nth-child(4) {
+            padding-left: 30px;
+            @include flex(row, flex-end, center, 5px, nowrap);
+        }
+
+
+    }
+}
+
+
+.addDrawer {
+    padding: 15px;
+    @include flex(column, space-between, normal, 25px, nowrap);
+
+    & input {
+        width: 100%;
+        font-size: 18px;
+    }
+
+    & button {
+        width: 100%;
+        @include btn();
+    }
+}
+
+.noReview {
+    @include flex(row, space-between, normal, 5px, nowrap);
+}
+
+.sad {
+    @include flex(row, space-between, normal, 5px, nowrap);
+}
+
+.addReviewBtn {
+    border: 2px solid blanchedalmond;
+    border-radius: 15px;
+    text-align: center;
+    @include flex(row, center, center, 5px, nowrap);
+    padding: 5px;
+}

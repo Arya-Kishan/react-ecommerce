@@ -5,6 +5,7 @@ import Card from '../../components/card/Card';
 import Related from '../relatedProducts/Related';
 import { addToCart } from '../../redux/cartSlice';
 import { Snackbar } from '@mui/material';
+import Message from '../message/Message';
 
 export default function SingleProduct() {
 
@@ -83,9 +84,13 @@ export default function SingleProduct() {
             </section>
 
             <section>
-                <Related setAdd={setAdd} setQuantity={setQuantity} />
+                <Message title={items?.title} />
             </section>
 
+            <section>
+                <Related setAdd={setAdd} setQuantity={setQuantity} />
+            </section>
+            
             <Snackbar
                 open={snack}
                 anchorOrigin={{
