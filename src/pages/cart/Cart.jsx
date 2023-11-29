@@ -59,24 +59,26 @@ export default function Cart() {
                         <Drawer open={expand} onClose={() => setExpand(false)} anchor='bottom'>
                             <section className='tableDraw'>
                                 <table>
-                                    <tr>
-                                        <th>Sr.</th>
-                                        <th>Product</th>
-                                        <th>Price</th>
-                                        <th>Quantity</th>
-                                        <th>Sum</th>
-                                    </tr>
-                                    {
-                                        cart && cart.map((e, i) => (
-                                            <tr key={i}>
-                                                <td>{i + 1}</td>
-                                                <td>{e.title}</td>
-                                                <td>${e.price}</td>
-                                                <td>{e.quantity}</td>
-                                                <td>${e.quantity * e.price}</td>
-                                            </tr>
-                                        ))
-                                    }
+                                    <tbody>
+                                        <tr>
+                                            <th>Sr.</th>
+                                            <th>Product</th>
+                                            <th>Price</th>
+                                            <th>Quantity</th>
+                                            <th>Sum</th>
+                                        </tr>
+                                        {
+                                            cart && cart.map((e, i) => (
+                                                <tr key={i}>
+                                                    <td>{i + 1}</td>
+                                                    <td>{e.title}</td>
+                                                    <td>${e.price}</td>
+                                                    <td>{e.quantity}</td>
+                                                    <td>${e.quantity * e.price}</td>
+                                                </tr>
+                                            ))
+                                        }
+                                    </tbody>
                                 </table>
                             </section>
                             <div id='tableTotal'><strong>Total : ${total}</strong></div>
