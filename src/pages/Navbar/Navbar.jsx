@@ -6,6 +6,7 @@ import MenuIcon from '@mui/icons-material/Menu';
 import { useNavigate } from 'react-router-dom';
 import { useDispatch, useSelector } from 'react-redux';
 import { getCategoryItems } from '../../redux/categorySlice';
+import Searchbtn from '../../components/searchButton/Searchbtn';
 
 export default function Navbar() {
 
@@ -27,6 +28,7 @@ export default function Navbar() {
       <h2 onClick={()=>navigate("/")}>SHOP</h2>
 
       <div className='cartbtn'>
+        <Searchbtn/>
         <IconButton onClick={() => { navigate("/cart") }}><ShoppingCartOutlinedIcon style={{ color: "white" }} />{cart.length > 0 ? <span id='quantity'>{cart.length}</span> : ""}</IconButton>
       </div>
 

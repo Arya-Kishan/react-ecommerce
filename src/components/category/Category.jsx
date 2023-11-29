@@ -15,7 +15,7 @@ export default function Category() {
 
     const handleClick = (item) => {
         dispatch(getCategoryItems(item))
-        navigate("/categories")
+        navigate(`/categories/${item}`)
     }
 
     return (

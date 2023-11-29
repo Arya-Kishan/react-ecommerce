@@ -2,8 +2,7 @@
 
 .single {
     @include flex(row, space-around, center, 0px, nowrap);
-
-
+    
     .product {
         width: fit-content;
         @include flex(column, center, center, 25px, nowrap);
@@ -26,10 +25,7 @@
         }
 
         .addQuantity {
-            display: flex;
-            flex-direction: row;
-            gap: 5px;
-            align-items: center;
+            @include flex(row, center, center, 8px, nowrap);
         }
 
         .addbtn,
@@ -45,24 +41,6 @@
             @include flex(column, space-around, center, 0px, nowrap);
 
         }
-    }
-}
-
-.snack {
-    border: 2px solid transparent;
-    border-radius: 8px;
-    width: 160px;
-    background-color: yellow;
-    color: black;
-    @include flex(row, center, center, 15px, nowrap);
-    padding: 5px;
-
-    button {
-        padding: 5px;
-        border: 2px solid white;
-        border-radius: 8px;
-        background-color: yellow;
-        color: green;
     }
 }
 

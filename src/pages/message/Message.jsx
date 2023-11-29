@@ -18,7 +18,8 @@ export default function Message({ title }) {
     const [rating, setRating] = useState(1)
     const check = useRef()
     const Date1 = new Date();
-    const date = dayjs(Date1.toLocaleDateString()).format("DD MMM");
+    const date = dayjs(Date1).format("DD MMM");
+    console.log(date);
 
 
     const dispatch = useDispatch()
@@ -44,7 +45,6 @@ export default function Message({ title }) {
         for (let i = 0; i < num; i++) {
             arr.push(<StarIcon key={i} style={{ color: 'gold',width:'12px' }} />)
         }
-        console.log(arr);
         return arr;
     }
 

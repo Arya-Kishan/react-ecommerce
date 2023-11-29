@@ -27,7 +27,7 @@ export default function Product() {
             </div>
             <div className='product'>
                 {
-                    product && product?.map((e, i) => (
+                    product && product?.slice(0,14).map((e, i) => (
                         <Card products={e} key={i} />
                     ))
                 }

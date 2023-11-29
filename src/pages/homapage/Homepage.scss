@@ -1,7 +1,16 @@
 @import '../../partial';
 
+a {
+    text-decoration: none;
+    color: white;
+    border: 2px solid white;
+    padding: 5px 15px;
+    cursor: pointer;
+}
+
 .banner {
     @include flex(column, center, center, 30px, nowrap);
+    scroll-behavior: smooth;
 }
 
 .home {
@@ -22,6 +31,17 @@
         }
     }
 
+    .homeSearch {
+        @include flex(row, center, center, 0, nowrap);
+        border: 2px solid white;
+        background-color: rgb(16, 16, 196);
+        box-shadow: 0 0 3px 1px white;
+
+        & span {
+            padding: 4px 8px;
+        }
+    }
+
     & img {
         width: 400px;
     }
@@ -29,9 +49,6 @@
     & button {
         border-radius: 8px;
         padding: 5px;
-        background-color: gold;
-        border: 2px solid gold;
-        box-shadow: 0 0 6px 2px gold;
     }
 
     @media screen and (max-width : '770px') {
@@ -79,7 +96,7 @@
         &>div:nth-child(1) {
             @include flex(column, center, center, 0, nowrap);
 
-            h1{
+            h1 {
                 font-size: 60px;
             }
 
@@ -89,6 +106,7 @@
                 font-size: 20px;
             }
         }
+
         &>div:nth-child(2) {
             @include flex(column, center, center, 0, nowrap);
         }
@@ -100,17 +118,85 @@
 
 }
 
-.searchDrawer {
-    height: 20vh;
-    @include flex(row, center, center, 10px, nowrap);
-    background: linear-gradient(blue, gold);
+.signUp {
+    @include flex(row, space-around, center, 0, nowrap);
+    width: 100%;
+    background-color: navy;
+    padding: 30px;
 
-    & button {
-        border-radius: 8px;
-        padding: 5px;
-        background-color: gold;
-        border: 2px solid gold;
-        box-shadow: 0 0 6px 2px gold;
+    & div:nth-child(1) {
+        width: 545px;
+        @include flex(column, center, flex-start, 7px, nowrap);
     }
 
+    & div:nth-child(2) {
+        width: 545px;
+        display: grid;
+        grid-template-columns: .8fr .2fr;
+
+        & input {
+            outline: none;
+        }
+
+        & button {
+            background-color: yellow;
+            border: 2px solid yellow;
+        }
+    }
+
+    @media screen and (max-width : '1100px') {
+        @include flex(column, center, center, 20px, nowrap);
+
+        & div:nth-child(1) {
+            width: 330px;
+            @include flex(column, center, flex-start, 7px, nowrap);
+        }
+
+        & div:nth-child(2) {
+            width: 330px;
+        }
+
+    }
+
+}
+
+.footer {
+    @include flex(row, space-around, flex-start, 20px, nowrap);
+    padding: 20px;
+    width: 100%;
+
+    & h1 {
+        text-align: left;
+    }
+
+    .apps > div{
+        border: 2px solid rgb(177, 170, 170);
+        display: inline-block;
+        width: 150px;
+        margin: 2px;
+    }
+
+    @media screen and (max-width : '1100px') {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 20px;
+        text-indent: 10%;
+
+        &>div:nth-child(1) {
+            display: none;
+        }
+
+        &>div:nth-child(4) {
+            display: none;
+        }
+
+    }
+
+}
+
+.copyright {
+    background-color: navy;
+    width: 100%;
+    padding: 10px;
+    text-align: center;
 }

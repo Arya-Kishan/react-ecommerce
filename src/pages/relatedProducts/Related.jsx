@@ -7,6 +7,11 @@ export default function Related({ setQuantity, setAdd }) {
 
   const related = useSelector(state => state.categoryitems.relateditems)
 
+  const handleScroll = ()=>{
+    window.scrollTo(0,0)
+    console.log('scroll');
+  }
+
   return (
     <div className='related'>
       <h1>RELATED PRODUCTS :-</h1>
@@ -17,7 +22,7 @@ export default function Related({ setQuantity, setAdd }) {
               setAdd(false)
               setQuantity(1)
             }}>
-              <Card products={e} />
+              <div onClick={handleScroll}><Card products={e} /></div>
             </div>
           ))
         }

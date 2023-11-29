@@ -18,6 +18,8 @@
 
     .cartbtn{
         position: relative;
+        @include flex(row, space-between, center, 0px, nowrap);
+
     }
 
     #quantity{

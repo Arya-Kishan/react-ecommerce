@@ -1,7 +1,6 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import './SingleProduct.scss'
 import { useDispatch, useSelector } from 'react-redux';
-import Card from '../../components/card/Card';
 import Related from '../relatedProducts/Related';
 import { addToCart } from '../../redux/cartSlice';
 import { Snackbar } from '@mui/material';
@@ -30,6 +29,10 @@ export default function SingleProduct() {
         setLargeImg(true)
         setLargeImgSrc(link)
     }
+
+    useEffect(()=>{
+        window.scrollTo(0,0)
+    },[])
 
 
     return (
