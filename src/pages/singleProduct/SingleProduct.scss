@@ -2,6 +2,7 @@
 
 .single {
     @include flex(row, space-around, center, 0px, nowrap);
+    padding: 15px;
     
     .product {
         width: fit-content;

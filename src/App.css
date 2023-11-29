@@ -1,3 +1,11 @@
+* {
+    scroll-behavior: smooth;
+    scroll-padding-top: 50px;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
 body {
     background-color: blue;
     color: white;
@@ -29,17 +37,12 @@ input {
     transform: translate(-50%, -50%);
 }
 
-::-webkit-scrollbar{
+::-webkit-scrollbar {
     display: none;
 }
 
-button{
+button {
     cursor: pointer;
-}
-
-*{
-    scroll-behavior: smooth;
-    scroll-padding-top: 50px;
 }
 
 .snack {
@@ -50,7 +53,9 @@ button{
     text-align: center;
     color: black;
     padding: 5px;
-    & div{
+    margin-top: 44px;
+
+    & div {
         width: 100%;
     }
 }

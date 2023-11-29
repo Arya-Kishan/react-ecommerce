@@ -20,7 +20,7 @@ export default function items() {
     return (
         <>
             <div className='productHeading'>
-                <h1>{categoryName.toUpperCase()}</h1>
+                <h1>{categoryName?.toUpperCase()}</h1>
                 <Filter product={item} setProduct={setItem} />
             </div>
             <div className='product'>

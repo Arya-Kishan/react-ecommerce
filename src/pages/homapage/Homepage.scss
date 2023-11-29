@@ -23,7 +23,7 @@ a {
     border-bottom: 1px solid white;
 
     &>div:nth-child(1) {
-        @include flex(column, center, center, 0, nowrap);
+        @include flex(column, center, center, 10px, nowrap);
 
         p {
             width: 368px;
@@ -60,15 +60,13 @@ a {
 
         }
 
-        &>div:nth-child(2) {
-            @include flex(column, flex-start, center, 0, nowrap);
-        }
-
         & img {
             width: 33vh;
         }
 
         &>div:nth-child(1) {
+            @include flex(column, center, center, 20px, nowrap);
+
             & h1 {
                 font-size: 50px;
             }
@@ -78,12 +76,16 @@ a {
                 font-family: 'Times New Roman', Times, serif
             }
 
-            @include flex(column, center, center, 0, nowrap);
 
             p {
                 width: 280px;
             }
         }
+
+        &>div:nth-child(2) {
+            @include flex(column, flex-start, center, 0, nowrap);
+        }
+
     }
 
     @media screen and (min-width : '1100px') {
@@ -169,7 +171,7 @@ a {
         text-align: left;
     }
 
-    .apps > div{
+    .apps>div {
         border: 2px solid rgb(177, 170, 170);
         display: inline-block;
         width: 150px;

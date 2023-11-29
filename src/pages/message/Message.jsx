@@ -1,4 +1,4 @@
-import React, { useEffect, useRef, useState } from 'react'
+import React, { useRef, useState } from 'react'
 import './Message.scss'
 import PersonIcon from '@mui/icons-material/Person';
 import ThreePIcon from '@mui/icons-material/ThreeP';

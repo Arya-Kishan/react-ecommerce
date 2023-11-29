@@ -17,6 +17,7 @@
     .checkBtn {
         @include btn();
         @include flex(row, flex-start, center, 10px, nowrap);
+        margin-left: 10px;
     }
 }
 
