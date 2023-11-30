@@ -41,9 +41,11 @@ export default function Cart() {
                                 {
                                     cart && cart.map((e, i) => (
                                         <div key={i} className='cartCard'>
+                                            
                                             <Card products={e} />
-                                            {/* <span>{e.quantity}</span> */}
+                                        
                                             <button onClick={() => { removeProduct(e) }}><DeleteIcon style={{ color: "white", width: "18px" }} /></button>
+
                                         </div>
                                     ))
                                 }

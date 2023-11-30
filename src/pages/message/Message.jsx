@@ -17,15 +17,11 @@ export default function Message({ title }) {
     const [review, setReview] = useState(false)
     const [rating, setRating] = useState(1)
     const check = useRef()
+    const dispatch = useDispatch()
     const Date1 = new Date();
     const date = dayjs(Date1).format("DD MMM");
-    console.log(date);
-
-
-    const dispatch = useDispatch()
 
     const message = useSelector(state => state.firebase.getMessage)
-    console.log(message);
 
     const handleAddFirebase = () => {
         dispatch(addFirebaseData({ title, rating, date, message: input }))

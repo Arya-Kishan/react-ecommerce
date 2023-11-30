@@ -27,6 +27,9 @@
 
         .addQuantity {
             @include flex(row, center, center, 8px, nowrap);
+            & button{
+                padding: 2px 5px;
+            }
         }
 
         .addbtn,
