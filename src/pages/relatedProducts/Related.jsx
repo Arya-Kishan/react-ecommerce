@@ -9,7 +9,6 @@ export default function Related({ setQuantity, setAdd }) {
 
   const handleScroll = ()=>{
     window.scrollTo(0,0)
-    console.log('scroll');
   }
 
   return (

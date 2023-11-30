@@ -10,6 +10,15 @@ export const getCategoryItems = createAsyncThunk(
     }
 )
 
+export const fetchSingleProduct = createAsyncThunk(
+    'item/singleProduct',
+    async (item, thunkAPI) => {
+        const { data } = await axios.get(`https://dummyjson.com/products/category/${item.category}`)
+        let a = data.products.filter((e)=>(e.title == item.title) )
+        return a[0];
+    }
+)
+
 export const getRelatedItems = createAsyncThunk(
     'item/relateditems',
     async (category, thunkAPI) => {
@@ -25,6 +34,7 @@ const initialState = {
     singleitem: null,
     categoryitems: null,
     relateditems: null,
+    singleProduct:null,
 }
 
 export const categorySlice = createSlice({
@@ -42,6 +52,9 @@ export const categorySlice = createSlice({
             })
             .addCase(getRelatedItems.fulfilled, (state, action) => {
                 state.relateditems = action.payload
+            })
+            .addCase(fetchSingleProduct.fulfilled, (state, action) => {
+                state.singleProduct = action.payload
             })
     },
 

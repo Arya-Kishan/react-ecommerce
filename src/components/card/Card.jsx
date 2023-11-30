@@ -2,7 +2,6 @@ import React from 'react'
 import './Card.scss'
 import { LazyLoadImage } from 'react-lazy-load-image-component';
 import { useNavigate } from 'react-router-dom'
-import { getsingleproduct } from '../../redux/categorySlice'
 import { useDispatch } from 'react-redux'
 import { getRelatedItems } from '../../redux/categorySlice'
 import StarIcon from '@mui/icons-material/Star';
@@ -14,9 +13,8 @@ export default function Card({ products }) {
 
 
     const handleClick = (item) => {
-        dispatch(getsingleproduct(item))
         dispatch(getRelatedItems({ category: item.category, product: item }))
-        navigate("/singleProduct")
+        navigate(`/singleProduct/${products.category}/${products.title}`)
     }
 
     return (

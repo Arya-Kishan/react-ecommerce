@@ -15,8 +15,6 @@ export default function Navbar() {
   const dispatch = useDispatch()
   const { pathname } = useLocation()
 
-
-
   const categories = useSelector(state => state.product.category)
   const cart = useSelector(state => state.cart.cart)
 
