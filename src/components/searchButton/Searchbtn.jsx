@@ -21,8 +21,9 @@ export default function Searchbtn() {
 
     const handleSearch = () => {
         dispatch(fetchSearchItem(input.toLowerCase()))
-        navigate("/search")
+        navigate(`/search/${input}`)
         setInput("")
+        setOpen(false)
     }
 
     useEffect(() => {

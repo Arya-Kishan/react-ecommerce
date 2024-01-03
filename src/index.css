@@ -1,0 +1,46 @@
+.circle1 {
+    height: 100px;
+    width: 100px;
+    border-radius: 50%;
+    background-color: rgba(0, 255, 255, 0.227);
+    animation: vibrate 3s linear infinite;
+    position: absolute;
+    top: 20%;
+    left: 10%;
+    z-index: 1;
+  }
+  
+  .circle2 {
+    height: 150px;
+    width: 150px;
+    border-radius: 50%;
+    background-color: rgba(15, 177, 177, 0.252);
+    animation: vibrate 3s linear infinite;
+    position: absolute;
+    top: 60%;
+    left: 70%;
+    z-index: 1;
+  }
+  
+  @media screen and (max-width : 550px) {
+    
+  .circle2 {
+    top: 60%;
+    left: 50%;
+    z-index: 1;
+  }
+  }
+  
+  @keyframes vibrate {
+    0% {
+      transform: translatey(0px);
+    }
+  
+    50% {
+      transform: translatey(-10px);
+    }
+  
+    100% {
+      transform: translatey(0px);
+    }
+  }

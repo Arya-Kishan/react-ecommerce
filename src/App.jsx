@@ -51,7 +51,7 @@ export default function App() {
             <Route path='/categories/:categoryName' element={<Categories />} />
             <Route path='/singleProduct/:category/:title' element={<SingleProduct />} />
             <Route path='/cart' element={<Cart />} />
-            <Route path='/search' element={<Search />} />
+            <Route path='/search/:item' element={<Search />} />
             <Route path='/cancel' element={<Cancel />} />
             <Route path='/success' element={<Success />} />
           </Routes>

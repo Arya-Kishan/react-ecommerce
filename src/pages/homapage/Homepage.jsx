@@ -6,6 +6,7 @@ import { useSelector } from 'react-redux'
 import AppleIcon from '@mui/icons-material/Apple';
 import PlayArrowIcon from '@mui/icons-material/PlayArrow';
 import { Button, Snackbar } from '@mui/material'
+import banner2 from '../../assets/banner2.png'
 
 export default function Homepage() {
 
@@ -27,17 +28,20 @@ export default function Homepage() {
 
                 <div>
 
-                    <h1>SALES</h1>
+                    <h1>STORE</h1>
 
                     <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Sed ea nostrum velit ab quia, laborum possimus pariatur voluptates facilis culpa!</p>
 
-                    <a href='#category'>Explore</a>
+                    <a href='#category'>SHOP</a>
 
                 </div>
 
                 <div>
-                    <img src="main.svg" alt="" />
+                    <img src={banner2} alt="" />
                 </div>
+
+                <div className="circle1"></div>
+                <div className="circle2"></div>
 
             </section>
 
