@@ -26,11 +26,15 @@ export default function Navbar() {
 
   return (
     <div className='navbar'>
+
       <h2 onClick={() => navigate("/")}>SHOP</h2>
 
       <div className='cartbtn'>
+
         <Searchbtn />
+
         <IconButton onClick={() => { navigate("/cart") }}><ShoppingCartOutlinedIcon style={{ color: "white" }} />{cart.length > 0 ? <span id='quantity'>{cart.length}</span> : ""}</IconButton>
+
       </div>
 
       {pathname == '/cart' ? null : <div className='menu'><IconButton onClick={() => setOpen(true)}><MenuIcon style={{ color: "black" }} /></IconButton></div>}
@@ -52,6 +56,7 @@ export default function Navbar() {
           <img src="main.svg" alt="" srcSet="" />
         </section>
       </Drawer>
+      
     </div>
   )
 }

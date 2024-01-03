@@ -12,6 +12,8 @@ const SingleProduct = lazy(() => (import('./pages/singleProduct/SingleProduct'))
 const Cart = lazy(() => (import('./pages/cart/Cart')))
 const Navbar = lazy(() => (import('./pages/Navbar/Navbar')))
 const Search = lazy(() => (import('./pages/search/Search')))
+const Success = lazy(() => (import('./pages/payment/Success')))
+const Cancel = lazy(() => (import('./pages/payment/Cancel')))
 
 
 export default function App() {
@@ -50,6 +52,8 @@ export default function App() {
             <Route path='/singleProduct/:category/:title' element={<SingleProduct />} />
             <Route path='/cart' element={<Cart />} />
             <Route path='/search' element={<Search />} />
+            <Route path='/cancel' element={<Cancel />} />
+            <Route path='/success' element={<Success />} />
           </Routes>
         </Suspense>
       </BrowserRouter>

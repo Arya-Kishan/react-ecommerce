@@ -5,8 +5,9 @@ import Card from '../../components/card/Card';
 import { removeFromCart } from '../../redux/cartSlice';
 import DeleteIcon from '@mui/icons-material/Delete';
 import ExpandLessIcon from '@mui/icons-material/ExpandLess';
-import { Expand } from '@mui/icons-material';
 import { Drawer } from '@mui/material';
+import PaidIcon from '@mui/icons-material/Paid';
+import {loadStripe} from '@stripe/stripe-js';
 
 export default function Cart() {
 
@@ -14,10 +15,31 @@ export default function Cart() {
     const [expand, setExpand] = useState(false)
 
     const cart = useSelector(state => state.cart.cart)
-    const dispatch = useDispatch()
+    const dispatch = useDispatch();
 
     const removeProduct = (item) => {
         dispatch(removeFromCart(item))
+    }
+
+    const handlePayment = async () => {
+        const stripe = await loadStripe("pk_test_51OTSOaSCLk89VVV2y65ICM1KafKVLbOIhdp06xHCYFST0x3lQGymFiCjyl2Ji6qOcmmugvwPipgsLxtF6bDOhcNM00Msw33mYG")
+        console.log(cart);
+
+        let res = await fetch("https://aryabackend.onrender.com/create-checkout-session", {
+            method: "POST",
+            headers: {
+                "Content-type": "application/json"
+            },
+            body: JSON.stringify(cart)
+        })
+
+        const session = await res.json();
+        console.log(session);
+
+        const result = stripe.redirectToCheckout({
+            sessionId:session.id
+        });
+
     }
 
     useEffect(() => {
@@ -41,9 +63,9 @@ export default function Cart() {
                                 {
                                     cart && cart.map((e, i) => (
                                         <div key={i} className='cartCard'>
-                                            
+
                                             <Card products={e} />
-                                        
+
                                             <button onClick={() => { removeProduct(e) }}><DeleteIcon style={{ color: "white", width: "18px" }} /></button>
 
                                         </div>
@@ -88,6 +110,10 @@ export default function Cart() {
                     </>
                 ) : (<h2>NO ITEMS IN CART</h2>)
             }
+
+            <div className="pay">
+                <button onClick={handlePayment}><PaidIcon />CHECKOUT</button>
+            </div>
         </div>
     )
 }

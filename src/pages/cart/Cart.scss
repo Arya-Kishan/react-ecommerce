@@ -80,3 +80,16 @@ th {
     @include flex(row, flex-end, center, 0px, nowrap);
 
 }
+
+.pay{
+    position: fixed;
+    bottom: 6%;
+    right: 2%;
+    width: fit-content;
+    button{
+        @include flex(row, center, center, 4px, nowrap);
+        border: none;
+        padding: 5px;
+        background-color: rgb(77, 77, 255);
+    }
+}

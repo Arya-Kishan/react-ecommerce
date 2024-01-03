@@ -5,6 +5,10 @@
     @include flex(row, center, center, 10px, nowrap);
     background: linear-gradient(blue, gold);
 
+    &>img{
+        width: 20px;
+    }
+
     & button {
         border-radius: 8px;
         padding: 5px;
