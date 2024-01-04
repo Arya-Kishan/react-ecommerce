@@ -30,7 +30,7 @@ export default function Homepage() {
 
                     <h1>STORE</h1>
 
-                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Sed ea nostrum velit ab quia, laborum possimus pariatur voluptates facilis culpa!</p>
+                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Sed ea nostrum velit ab quia, laborum possimus pariatur voluptates facilis culpa!Lorem ipsum</p>
 
                     <a href='#category'>SHOP</a>
 
