@@ -19,7 +19,7 @@ export default function Card({ products }) {
 
     return (
         <div>
-            {products &&
+            {products ?
                 <div className='card' onClick={() => { handleClick(products) }}>
 
                     <div> <LazyLoadImage effect="blur" src={products.thumbnail} />
@@ -35,6 +35,20 @@ export default function Card({ products }) {
                     </div>
 
                 </div>
+                :
+                (<div className='card'>
+                    <div> <img src="" alt="" />
+                    </div>
+
+                    <div id='title'>
+                        random
+                    </div>
+
+                    <div className='price'>
+                        <div><strong>999</strong></div>
+                        <div>***</div>
+                    </div>
+                </div>)
             }
         </div>
     )

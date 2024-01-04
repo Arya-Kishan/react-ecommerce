@@ -5,7 +5,7 @@ import axios from 'axios'
 export const fetchProduct = createAsyncThunk(
     'products/all',
     async (userId, thunkAPI) => {
-        const { data } = await axios.get(`https://dummyjson.com/products`)
+        const { data } = await axios.get(`https://dummyjson.com/products?limit=14`)
         return data
     }
 )

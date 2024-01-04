@@ -1,21 +1,35 @@
 @import '../partial';
 
-h1 {
-    text-align: center;
-    padding: 10px 0;
-}
+.mainProducts {
+    @include flex(column, center, center, 10px, nowrap);
 
-.productHeading {
-    @include flex(row, space-between, center, 0, nowrap);
-    padding: 0 10px;
-    margin: 10px 0;
-}
+    h1 {
+        text-align: center;
+        padding: 10px 0;
+    }
 
-.product {
-    @include flex(row, center, center, 30px, wrap);
-    width: 100%;
+    .productHeading {
+        @include flex(row, space-between, center, 0, nowrap);
+        width: 100%;
+        padding: 0 10px;
+        margin: 10px 0;
+    }
 
-    @media screen and (max-width : '456px') {
-        @include flex(row, center, center, 10px, wrap);
+    .product {
+        @include flex(row, center, center, 30px, wrap);
+        width: 100%;
+
+        @media screen and (max-width : '456px') {
+            @include flex(row, center, center, 10px, wrap);
+        }
+    }
+    
+    .pagination {
+
+        button {
+            color: white;
+            font-size: 20px;
+            margin: 20px;
+        }
     }
 }
