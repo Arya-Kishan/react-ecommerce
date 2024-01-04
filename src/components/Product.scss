@@ -23,13 +23,19 @@
             @include flex(row, center, center, 10px, wrap);
         }
     }
-    
+
     .pagination {
 
         button {
             color: white;
             font-size: 20px;
-            margin: 20px;
+            margin: 10px;
+
+            @media screen and (max-width : '480px') {
+                font-size: 10px;
+                margin: 3px;
+            }
         }
+
     }
 }

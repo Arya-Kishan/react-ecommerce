@@ -47,7 +47,7 @@ export default function Product() {
             </div>
 
             <div className='pagination'>
-                <Pagination count={7} variant="outlined" color="primary" onChange={handlePage} />
+                <Pagination count={7} variant="outlined" color="primary" shape="rounded"onChange={handlePage} />
             </div>
 
         </div>

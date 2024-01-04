@@ -13,7 +13,9 @@ export default function Related({ setQuantity, setAdd }) {
 
   return (
     <div className='related'>
+
       <h1>RELATED PRODUCTS :-</h1>
+
       <div className='product'>
         {
           related && related.map((e, i) => (
@@ -26,6 +28,7 @@ export default function Related({ setQuantity, setAdd }) {
           ))
         }
       </div>
+      
     </div>
   )
 }

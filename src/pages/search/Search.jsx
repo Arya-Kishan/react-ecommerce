@@ -3,33 +3,47 @@ import { useSelector } from 'react-redux'
 import Card from '../../components/card/Card'
 import Filter from '../../components/filter/Filter'
 import { useParams } from 'react-router-dom'
+import './Search.scss'
+import axios from 'axios'
 
 export default function Search() {
 
-    const search = useSelector(state => state.search.value)
+    // const search = useSelector(state => state.search.value)
     const [item, setItem] = useState(null)
     const param = useParams()
-    console.log(param.item);
+
+    const fetchItem = async () => {
+        let res = await fetch(`https://dummyjson.com/products/search?q=${param.item}`)
+        res = await res.json()
+        console.log(res.products);
+        setItem(res.products);
+    }
 
     useEffect(() => {
-        setItem(search)
-    }, [search])
+        fetchItem();
+    }, [])
 
     return (
-        <>
-            <Filter product={item} setProduct={setItem} />
+        <div className='mainSearch'>
+
+            <div>
+                <h1>{param.item.toUpperCase()}</h1>
+                <Filter product={item} setProduct={setItem} />
+            </div>
+
             {
-                (search?.length >= 1) ? (
+                (item?.length >= 1) ? (
                     <>
-                        <div className='product'>
+                        <div>
                             {
                                 item && item?.map((e, i) => (
                                     <Card products={e} key={i} />
                                 ))
                             }
                         </div></>
-                ) : (<h2>NO SEARCH RESULT FOR {param.item}</h2>)
+                ) : (<h2>NO SEARCH RESULT FOR {param.item.toUpperCase()}</h2>)
             }
-        </>
+
+        </div>
     )
 }

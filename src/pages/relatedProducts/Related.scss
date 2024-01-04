@@ -1,8 +1,15 @@
+@import '../../partial';
+
 .related{
     margin: 4vh 0;
     padding: 5px;
 
+    .product{
+        @include flex(row,center,center,30px,wrap);
+    }
+
     h1{
         text-align: left;
+        margin-bottom: 20px;
     }
 }

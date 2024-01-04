@@ -28,6 +28,7 @@
         display: grid;
         grid-template-columns: .7fr .3fr;
         grid-template-rows: 1fr 1fr;
+        padding: 0 10px;
 
         &>div:nth-child(1) {
             @include flex(row, flex-start, center, 5px, nowrap);

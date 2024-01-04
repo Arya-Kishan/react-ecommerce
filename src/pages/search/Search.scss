@@ -1,0 +1,16 @@
+@import '../../partial';
+
+.mainSearch{
+    @include flex(column,center,center,30px,wrap);
+    padding: 20px 0;
+    & > div:nth-child(1){
+        @include flex(row,space-around,center,30px,wrap);
+        width: 100%;
+    }
+    & > div:nth-child(2){
+        @include flex(row,center,center,30px,wrap);
+    }
+    h2{
+        @include pos();
+    }
+}
